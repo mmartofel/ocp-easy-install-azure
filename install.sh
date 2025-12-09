@@ -13,11 +13,11 @@ PULL_SECRET_FILE="${PULL_SECRET_FILE:-./pull-secret.txt}"
 SSH_KEY_FILE="${SSH_KEY_FILE:-./ssh/id_rsa.pub}"
 
 # Azure-specific env (can be set externally)
-AZURE_PROFILE="${AZURE_PROFILE:-default}" # not used by az CLI but kept for parity
-AZURE_SUBSCRIPTION_ID="${AZURE_SUBSCRIPTION_ID:-}"
-AZURE_TENANT_ID="${AZURE_TENANT_ID:-}"
-AZURE_CLIENT_ID="${AZURE_CLIENT_ID:-}"
-AZURE_CLIENT_SECRET="${AZURE_CLIENT_SECRET:-}"
+export AZURE_PROFILE="${AZURE_PROFILE:-default}" # not used by az CLI but kept for parity
+export AZURE_SUBSCRIPTION_ID="${AZURE_SUBSCRIPTION_ID:-}"
+export AZURE_TENANT_ID="${AZURE_TENANT_ID:-}"
+export AZURE_CLIENT_ID="${AZURE_CLIENT_ID:-}"
+export AZURE_CLIENT_SECRET="${AZURE_CLIENT_SECRET:-}"
 
 MASTER_FILE="./instances/master"
 WORKER_FILE="./instances/worker"
