@@ -274,6 +274,11 @@ compute:
   platform:
     azure:
       type: ${WORKER_INSTANCE_TYPE}
+      osImage:
+        publisher: redhat
+        offer: rh-ocp-worker
+        sku: rh-ocp-worker
+        version: 4.18.2025112710
   replicas: 3
 controlPlane:
   architecture: amd64
