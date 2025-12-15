@@ -44,8 +44,11 @@ cd ocp_easy_install_azure
 2. **Set optional environment variables:**
 
 export CLUSTER_NAME=zenek
+
 export CLUSTER_DIR=./config
+
 export BASE_DOMAIN=example.com
+
 export AZURE_REGION=eastus
 
 or do nothing and stay with default values set inside install.sh.
