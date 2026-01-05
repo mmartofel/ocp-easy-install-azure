@@ -249,8 +249,9 @@ set_release_image() {
 # GENERATE INSTALL CONFIG (Azure)
 ##############################################
 generate_install_config() {
-  mkdir -p "$CLUSTER_DIR"
-  rm -f "$CLUSTER_DIR/install-config.yaml"
+  
+  rm -rf ${CLUSTER_DIR} 2>/dev/null || true
+  mkdir -p ${CLUSTER_DIR}
 
   log_info "Generating $CLUSTER_DIR/install-config.yaml ..."
 

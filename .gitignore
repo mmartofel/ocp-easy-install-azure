@@ -5,4 +5,4 @@ pull-secret.txt
 logs/
 secrets/
 id_*
-env.sh
+azure-env.sh

@@ -43,19 +43,30 @@ cd ocp_easy_install_azure
 
 2. **Set optional environment variables:**
 
+At the file env.sh you can set following variables:
+
 ```bash
-export CLUSTER_NAME=zenek
-export CLUSTER_DIR=./config
-export BASE_DOMAIN=example.com
-export AZURE_REGION=eastus
+CLUSTER_DIR=config
+CLUSTER_NAME=zenek
+BASE_DOMAIN=example.com
+PULL_SECRET_FILE=./pull-secret.txt
+SSH_KEY_FILE=./ssh/id_rsa.pub
+```
+
+then just source it:
+
+```bash
+. ./env.sh
 ```
 
 or do nothing and stay with default values set inside install.sh.
 
 3. **Run the installation script:**
 
+Run cluster installation script and foollow instructions to provide a proper parameters and credentials:
+
 ```bash
-./install.sh
+./02_install_cluster.sh
 ```
 
 ![alt text](./images/install.png)
@@ -94,7 +105,7 @@ or via brawser as of an info passed at the end of paragraph 4
 
 You can modify:
 
-```
+```bash
 ./instances/master
 ./instances/worker
 ```
@@ -102,6 +113,14 @@ You can modify:
 files content to update available Azure instance types, I just provided a few tested, feel free to put your own you need at your cluster.
 
 Here is a great place to use GPU equited instances to start your jouney with AI, best would be Red Hat OpenShift AI ;-)
+
+## 🖌️ Uninstall your cluster
+
+If you don't need your cluster anymore, simply delete it:
+
+```bash
+./03_uninstall_cluster.sh
+```
 
 ## ⚠️ Notes
 
