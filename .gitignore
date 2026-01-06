@@ -6,3 +6,4 @@ logs/
 secrets/
 id_*
 azure-env.sh
+login.txt
