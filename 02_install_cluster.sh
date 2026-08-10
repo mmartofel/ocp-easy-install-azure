@@ -11,6 +11,7 @@ CLUSTER_NAME="${CLUSTER_NAME:-zenek}"
 BASE_DOMAIN="${BASE_DOMAIN:-example.com}"
 PULL_SECRET_FILE="${PULL_SECRET_FILE:-./pull-secret.txt}"
 SSH_KEY_FILE="${SSH_KEY_FILE:-./ssh/id_rsa.pub}"
+OCP_CHANNEL="${OCP_CHANNEL:-stable-4.20}"
 
 # Azure-specific env (can be set externally)
 export AZURE_PROFILE="${AZURE_PROFILE:-default}" # not used by az CLI but kept for parity
@@ -173,7 +174,7 @@ select_instance_type() {
 # FETCH AVAILABLE OCP VERSIONS FOR GIVEN MINOR
 ###############################################
 get_ocp_versions() {
-    local channel="stable-4.20"
+    local channel="$OCP_CHANNEL"
 
     echo "💡 Fetching OpenShift versions from channel: $channel ..." >&2
 
