@@ -11,7 +11,7 @@ CLUSTER_NAME="${CLUSTER_NAME:-zenek}"
 BASE_DOMAIN="${BASE_DOMAIN:-example.com}"
 PULL_SECRET_FILE="${PULL_SECRET_FILE:-./pull-secret.txt}"
 SSH_KEY_FILE="${SSH_KEY_FILE:-./ssh/id_rsa.pub}"
-OCP_CHANNEL="${OCP_CHANNEL:-stable-4.20}"
+OCP_CHANNEL="${OCP_CHANNEL:-stable-4.22}" # default channel for OCP versions (can be overridden by env)
 
 # Azure-specific env (can be set externally)
 export AZURE_PROFILE="${AZURE_PROFILE:-default}" # not used by az CLI but kept for parity
