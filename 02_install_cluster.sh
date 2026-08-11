@@ -181,10 +181,10 @@ get_ocp_versions() {
     ALL_VERSIONS=$(curl -s "https://api.openshift.com/api/upgrades_info/v1/graph?channel=${channel}" \
         | jq -r '.nodes[].version')
 
-    VERSIONS=$(echo "$ALL_VERSIONS" | grep '^4\.20\.' | sort -V)
+    VERSIONS=$(echo "$ALL_VERSIONS" | grep '^4\.22\.' | sort -V)
 
     if [[ -z "$VERSIONS" ]]; then
-        echo "❌ No OpenShift 4.20 versions found in $channel" >&2
+        echo "❌ No OpenShift 4.22 versions found in $channel" >&2
         exit 1
     fi
 
